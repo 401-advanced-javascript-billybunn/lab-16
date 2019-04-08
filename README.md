@@ -4,7 +4,7 @@
 <!-- LINKS -->
 <!-- Replace the link for each in brackets below -->
 <!-- PR (working into submission) -->
-[1]: http://xyz.com
+[1]: https://github.com/401-advanced-javascript-billybunn/lab-16/pull/1
 <!-- travis build -->
 [2]: https://www.travis-ci.com/YOUR_ORG_NAME/REPO_NAME
 <!-- back-end -->
@@ -16,9 +16,9 @@
 <!-- jsdoc-->
 [6]: heroku-link/docs 
 
-## Project Name
+## Event Driven Applications
 
-### Author: YOUR NAME
+### Author: Billy Bunn
 
 ### Links and Resources
 * [PR][1]
