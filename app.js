@@ -1,13 +1,4 @@
 'use strict';
-/*
-Refactor the provided application using best practices for modularization, asynchronous file access, and test-ability.
-
-TODO:
-Separate the functionality of that big callback into it's parts, so that you can run them independently as well as test.
-  Read in a file
-  Uppercase it's contents (stringify the buffer, upper case it, re-buffer-ize it)
-  Save back to the file.
-*/
 
 const fs = require('fs');
 const util = require('util');
@@ -18,15 +9,14 @@ const events = require('./event-pool.js');
 require('./logger.js');
 
 const alterFile = (file) => {
+
   // Read the file from the file system
-  readFile(file)
+  read(file)
     .then(data => {
-
       // Convert it's contents to upper case
-      let text = data.toString().toUpperCase();
-
+      let text = uppercase(data);
       // Write it back to the file system
-      return writeFile(file, Buffer.from(text));
+      return write(file, text);
     })
 
     // Report back to the user (console.log) the status
@@ -36,21 +26,21 @@ const alterFile = (file) => {
     .catch(error => events.emit('file-error', error));
 };
 
-// Example CLI input: node app.js dummy.txt
-let file = process.argv.slice(2).shift();
+let file = process.argv.slice(2).shift(); // e.g., node app.js dummy.txt
 
 alterFile(file);
 
-/*
-// Starter code
-const alterFile = (file) => {
-  fs.readFile(file, (err, data) => {
-    if (err) { throw err; }
-    let text = data.toString().toUpperCase();
-    fs.writeFile(file, Buffer.from(text), (err, data) => {
-      if (err) { throw err; }
-      console.log(`${file} saved`);
-    });
-  });
-};
-*/
+// Read in a file
+function read(file) {
+  return readFile(file);
+}
+
+// Uppercase it's contents (stringify the buffer, upper case it, re-buffer-ize it)
+function uppercase(data) {
+  return Buffer.from(data.toString().toUpperCase());
+}
+
+// Save back to the file
+function write(file, contents) {
+  return writeFile(file, contents);
+}

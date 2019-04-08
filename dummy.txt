@@ -1,1 +1,1 @@
-some dummy text to conver to uppercase
+some dummy text to make uppercase

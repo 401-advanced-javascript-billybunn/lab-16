@@ -12,4 +12,3 @@ function handleCompleted(file) {
 function handleError(err) {
   throw err;
 }
-
