@@ -71,7 +71,7 @@ describe('app.js', () => {
 
   xit('write() - when given bad data to write, returns an error', () => {
     expect(true).toBeTruthy();
-    
+
   });
 
   xit('write() - can write a file', () => {
@@ -82,11 +82,11 @@ describe('app.js', () => {
 });
 
 describe('logger.js', () => {
-  xit('can log on completion', () => {
+  xit('calls the handleCompleted function on the "completed" event', () => {
     expect(true).toBeTruthy();
   });
 
-  xit('can log and throw an error', () => {
+  xit('calls the handleError function on the "file-error" event', () => {
     expect(true).toBeTruthy();
   });
 });
