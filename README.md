@@ -17,7 +17,7 @@
 [6]: heroku-link/docs 
 
 ## Event Driven Applications
-
+[![Build Status](https://travis-ci.com/401-advanced-javascript-billybunn/lab-16.svg?branch=master)](https://travis-ci.com/401-advanced-javascript-billybunn/lab-16)
 ### Author: Billy Bunn
 
 ### Links and Resources
