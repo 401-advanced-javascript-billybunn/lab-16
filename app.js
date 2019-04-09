@@ -44,3 +44,5 @@ function uppercase(data) {
 function write(file, contents) {
   return writeFile(file, contents);
 }
+
+module.exports = {read, uppercase, write};

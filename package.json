@@ -13,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "faker": "^4.1.0",
     "jest": "^24.7.1"
   }
 }
